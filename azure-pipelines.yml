@@ -12,10 +12,10 @@ variables:
   azureSubscription: '86114e41-ea37-49a1-9d29-8568cece8c7b'
 
   # Function app name
-  functionAppName: 'sakshifuunclllp'
+  functionAppName: 'pratice1235'
 
   # Environment name
-  environmentName: 'sakshifuunclllp'
+  environmentName: 'pratice1235'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -75,7 +75,7 @@ stages:
         deploy:
           steps:
           - task: AzureFunctionApp@1
-            displayName: 'Azure Functions App Deploy: sakshifuunclllp'
+            displayName: 'Azure Functions App Deploy: pratice1235'
             inputs:
               azureSubscription: '$(azureSubscription)'
               appType: functionAppLinux
