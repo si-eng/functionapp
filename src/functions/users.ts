@@ -3,7 +3,7 @@ import sequelize from "../db_connection/db_connect";
 import User from "../models/User";
 
 export async function users(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
-  const sequelizeConnection = sequelize([User]);
+  const sequelizeConnection = sequelize(User);
   try {
     await sequelizeConnection.authenticate();
     
@@ -18,7 +18,7 @@ export async function users(request: HttpRequest, context: InvocationContext): P
 };
 
 app.http('users', {
-  methods: ['GET', 'POST'],
+  methods: ['GET'],
   authLevel: 'anonymous',
   handler: users
 });
